@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Potter's House - Coming Soon</title>
+    
+    <!-- SEO Meta Tags to help ranking -->
+    <meta name="description" content="RCCG The Potter's House, Gbagada. Join our Sunday services from 8:00 AM - 11:00 AM and Wednesday Rhema Cafe at 6:30 PM. Moulding Agents of Change. Our official website is coming soon.">
+    <meta name="robots" content="index, follow">
+    
     <!-- Google Fonts for elegant typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for clean brand and schedule icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            /* Harmonized Palette based on RCCG / The Potter's House branding */
-            --primary-color: #0a2540;   /* Deep Royal Blue */
-            --accent-color: #e5b842;    /* Refined Gold */
-            --secondary-accent: #d9383a; /* Subtle Warm Red for dynamic elements */
+            --primary-color: #0d3b2a;
+            --accent-color: #e5b842;
             --text-light: #ffffff;
-            --text-muted: #cbd5e1;
-            --bg-gradient: linear-gradient(135deg, #061526 0%, #0c233c 50%, #1a1423 100%);
+            --text-dark: #121212;
+            --bg-body: #f7f7f7;
+            --bg-card: #ffffff;
+            --facebook-color: #1877f2;
+            --instagram-color: #e1306c;
+            --youtube-color: #ff0000;
         }
 
         * {
@@ -26,258 +35,388 @@
             padding: 0;
         }
 
+        /* FIX 3: Prevent horizontal scroll on any screen size */
         body {
             font-family: 'Montserrat', sans-serif;
-            background: var(--bg-gradient);
-            color: var(--text-light);
+            background-color: var(--bg-body);
+            color: var(--text-dark);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 20px;
             overflow-x: hidden;
         }
 
-        /* Ambient background glow optimized for the new color scheme */
-        .bg-glow {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 700px;
-            height: 700px;
-            background: radial-gradient(circle, rgba(229, 184, 66, 0.04) 0%, rgba(217, 56, 58, 0.02) 50%, rgba(0,0,0,0) 70%);
-            z-index: -1;
-            pointer-events: none;
+        .hero-banner {
+            width: 100%;
+            height: 40vh;
+            background-image: url('/Asset/Images/bg-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .container {
-            max-width: 800px;
-            width: 100%;
-            z-index: 1;
-        }
-
-        .logo-area {
-            margin-bottom: 35px;
-        }
-
-        /* Dedicated Logo Card Container to isolate and pop the branding */
-        .logo-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(8px);
-            display: inline-block;
-            padding: 20px 35px;
-            border-radius: 16px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-        }
-
-        .logo-card img {
-            max-height: 110px;
-            width: auto;
-            object-fit: contain;
-            display: block;
+            width: 90%;
+            max-width: 900px;
+            margin: -80px auto 40px auto;
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+            /* FIX 1: Ensure card text is centered by default */
+            text-align: center;
         }
 
         h1 {
             font-family: 'Cinzel', serif;
-            font-size: 2.6rem;
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            /* FIX 1: Explicit center alignment */
+            text-align: center;
+        }
+
+        .motto {
+            font-size: 0.9rem;
+            text-transform: uppercase;
             letter-spacing: 3px;
-            margin-bottom: 15px;
-            color: var(--text-light);
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            color: #777;
+            margin-bottom: 20px;
+            font-weight: 600;
+            /* FIX 1: Explicit center alignment */
+            text-align: center;
         }
 
         .tagline {
-            font-size: 1.15rem;
-            font-weight: 300;
-            color: var(--text-muted);
-            margin-bottom: 40px;
+            font-size: 1rem;
             line-height: 1.6;
-            max-width: 680px;
-            margin-left: auto;
-            margin-right: auto;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 35px auto;
+            font-weight: 400;
+            /* FIX 1: Explicit center alignment */
+            text-align: center;
         }
 
-        /* Countdown Timer Styles */
+        /* Countdown Section */
+        .countdown-section {
+            margin-bottom: 40px;
+        }
+
+        .section-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 600;
+            /* FIX 1: Explicit center alignment */
+            text-align: center;
+        }
+
         .countdown-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 45px;
-            flex-wrap: wrap;
+            background: #112d1c;
+            padding: 25px;
+            border-radius: 8px;
+            gap: 15px;
         }
 
         .time-box {
-            background: rgba(10, 37, 64, 0.5);
-            border: 1px solid rgba(225, 184, 66, 0.15);
-            border-radius: 12px;
-            padding: 22px;
-            min-width: 110px;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .time-box:hover {
-            transform: translateY(-2px);
-            border-color: rgba(225, 184, 66, 0.3);
+            background: var(--bg-card);
+            border-radius: 6px;
+            padding: 15px 10px;
+            flex: 1;
+            min-width: 80px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .time-num {
-            font-size: 2.6rem;
-            font-weight: 600;
+            font-size: 2.2rem;
+            font-weight: 700;
             color: var(--accent-color);
             display: block;
-            line-height: 1;
         }
 
         .time-label {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
+            color: var(--primary-color);
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--text-muted);
-            margin-top: 8px;
-            display: block;
-        }
-
-        /* Info & Update Section */
-        .info-section {
-            background: rgba(255, 255, 255, 0.02);
-            border-top: 3px solid var(--accent-color);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 35px;
-            border-radius: 4px 4px 12px 12px;
-            max-width: 650px;
-            margin: 0 auto 40px auto;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .info-section h3 {
-            font-size: 1.2rem;
-            margin-bottom: 18px;
+            letter-spacing: 0.5px;
             font-weight: 600;
-            letter-spacing: 1px;
-            color: var(--accent-color);
         }
 
-        .info-section p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-            line-height: 1.5;
+        /* Info & Social Layout */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            border-top: 1px solid #eaeaea;
+            padding-top: 40px;
+            /* Restore left alignment for the grid content */
+            text-align: left;
         }
 
-        .info-section strong {
-            color: var(--text-light);
+        .info-column h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            display: inline-block;
         }
 
-        /* Social Links */
-        .social-links {
+        .schedule-item {
             display: flex;
-            justify-content: center;
+            align-items: flex-start;
             gap: 15px;
-            margin-top: 25px;
-            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .schedule-item i {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-top: 3px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .schedule-text p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .schedule-text span {
+            font-size: 0.85rem;
+            color: #666;
+            display: block;
+            margin-top: 2px;
+        }
+
+        /* Social Connection Elements */
+        .social-links {
+            list-style: none;
+        }
+
+        .social-links li {
+            margin-bottom: 15px;
         }
 
         .social-links a {
-            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #444;
             text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 400;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 10px 20px;
-            border-radius: 25px;
-            background: rgba(255, 255, 255, 0.01);
+            padding: 8px 12px;
+            border-radius: 6px;
+            background: #fdfdfd;
+            border: 1px solid #eee;
         }
 
-        .social-links a:hover {
-            color: var(--primary-color);
-            background: var(--accent-color);
-            border-color: var(--accent-color);
-            box-shadow: 0 4px 12px rgba(229, 184, 66, 0.2);
+        .social-links a i {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            width: 20px;
+            text-align: center;
+        }
+
+        .social-links li:hover a {
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-color: #ddd;
+        }
+
+        .social-links li:nth-child(1):hover a { color: var(--facebook-color); }
+        .social-links li:nth-child(2):hover a { color: var(--instagram-color); }
+        .social-links li:nth-child(3):hover a { color: var(--youtube-color); }
+
+        .social-links li:hover i {
+            transform: scale(1.15);
         }
 
         footer {
             font-size: 0.8rem;
-            color: #556b82;
+            color: #777777;
+            padding: 30px 16px;
+            width: 100%;
+            border-top: 1px solid #eaeaea;
             margin-top: auto;
-            padding-top: 40px;
-            letter-spacing: 0.5px;
+            text-align: center;
         }
 
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            h1 { font-size: 1.9rem; }
-            .tagline { font-size: 1rem; }
-            .countdown-container { gap: 12px; }
-            .time-box { min-width: 80px; padding: 15px 8px; }
-            .time-num { font-size: 1.9rem; }
-            .social-links { flex-direction: column; width: 100%; gap: 10px; }
-            .social-links a { width: 100%; display: block; }
-            .logo-card { padding: 15px 25px; }
-            .logo-card img { max-height: 85px; }
+        /* ── 768px breakpoint ── */
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .hero-banner { height: 28vh; }
+            .container {
+                padding: 30px 20px;
+                margin-top: -50px;
+            }
+        }
+
+        /* ── 480px breakpoint ── */
+        @media (max-width: 480px) {
+            h1 { font-size: 1.6rem; }
+            .motto { font-size: 0.8rem; letter-spacing: 1.5px; }
+            .countdown-container { padding: 15px; gap: 8px; }
+            .time-box { padding: 10px 4px; min-width: 55px; }
+            .time-num { font-size: 1.7rem; }
+            .time-label { font-size: 0.7rem; }
+
+            /* FIX 2: Reduce negative margin so card doesn't slip below/over the hero */
+            .container { margin-top: -30px; }
+
+            /* FIX 4: Add horizontal padding so footer text doesn't hug screen edges */
+            footer { padding: 20px 16px; }
         }
     </style>
+
+    <!-- JSON-LD Structured Data Schema for Local Church SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PlaceOfWorship",
+      "name": "RCCG The Potter's House",
+      "description": "A parish of the Redeemed Christian Church of God (RCCG) - Moulding Agents of Change.",
+      "url": "https://rccgtph.com",
+      "logo": "https://www.rccgtph.com/Asset/Images/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3 Towobola Street, Behind Mobil Filling Station",
+        "addressLocality": "Gbagada",
+        "addressRegion": "Lagos",
+        "addressCountry": "NG"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "08:00",
+          "closes": "11:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Wednesday",
+          "opens": "18:30",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/rccgtph",
+        "https://www.instagram.com/rccgtph",
+        "https://www.youtube.com/rccgtphmedia"
+      ]
+    }
+    </script>
 </head>
 <body>
 
-    <div class="bg-glow"></div>
+    <div class="hero-banner"></div>
 
     <div class="container">
-        <!-- Header / Logo Area -->
-        <div class="logo-area">
-            <div class="logo-card">
-                <img src="Asset/Images/logo.png" alt="RCCG The Potter's House Logo">
+        <h1>THE POTTER'S HOUSE</h1>
+        <div class="motto">Moulding Agents of Change</div>
+        
+        <p class="tagline">Something beautiful is preparing to launch. Our new digital sanctuary is currently under construction to better serve our community.</p>
+
+        <div class="countdown-section">
+            <span class="section-label">Our New Website Launches Soon</span>
+            <div class="countdown-container">
+                <div class="time-box">
+                    <span class="time-num" id="days">00</span>
+                    <span class="time-label">Days</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-num" id="hours">00</span>
+                    <span class="time-label">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-num" id="minutes">00</span>
+                    <span class="time-label">Min</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-num" id="seconds">00</span>
+                    <span class="time-label">Sec</span>
+                </div>
             </div>
-            <h1>THE POTTER'S HOUSE</h1>
-            <p class="tagline">Something beautiful is preparing to launch. Our new digital sanctuary is currently under construction to better serve our community.</p>
         </div>
 
-        <!-- Countdown Timer -->
-        <div class="countdown-container">
-            <div class="time-box">
-                <span class="time-num" id="days">00</span>
-                <span class="time-label">Days</span>
-            </div>
-            <div class="time-box">
-                <span class="time-num" id="hours">00</span>
-                <span class="time-label">Hours</span>
-            </div>
-            <div class="time-box">
-                <span class="time-num" id="minutes">00</span>
-                <span class="time-label">Minutes</span>
-            </div>
-            <div class="time-box">
-                <span class="time-num" id="seconds">00</span>
-                <span class="time-label">Seconds</span>
-            </div>
-        </div>
+        <div class="info-grid">
+            <div class="info-column">
+                <h3>Programme Details</h3>
+                
+                <div class="schedule-item">
+                    <i class="fa-solid fa-cross"></i>
+                    <div class="schedule-text">
+                        <p><strong>Sunday Service</strong></p>
+                        <span>8:00 AM - 11:00 AM</span>
+                    </div>
+                </div>
 
-        <!-- Fellowship & Service Info Section -->
-        <div class="info-section">
-            <h3>Join Us This Sunday</h3>
-            <p><strong>Location:</strong> 3 Towobola Street, Behind Mobil Filling Station, Gbagada</p>
-            <p><strong>Service Time:</strong> 8:00 AM - 11:00 AM</p>
-            
-            <div class="social-links">
-                <a href="https://facebook.com/rccgtph" target="_blank">Watch Live on Facebook</a>
-                <a href="https://www.youtube.com/@RCCGTPHMEDIA" target="_blank">Subscribe on YouTube</a>
-                <a href="https://www.instagram.com/rccgtph" target="_blank">Follow on Instagram</a>
+                <div class="schedule-item">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <div class="schedule-text">
+                        <p><strong>Wednesday Rhema Cafe</strong></p>
+                        <span>6:30 PM - 8:00 PM</span>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="schedule-text">
+                        <p><strong>Sanctuary Address</strong></p>
+                        <span>3 Towobola Street, Behind Mobil Filling Station, Gbagada, Lagos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-column">
+                <h3>Stay Connected</h3>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://facebook.com/rccgtph" target="_blank">
+                            <i class="fa-brands fa-facebook" style="color: var(--facebook-color);"></i>
+                            <span>rccgtph</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/rccgtph" target="_blank">
+                            <i class="fa-brands fa-instagram" style="color: var(--instagram-color);"></i>
+                            <span>rccgtph</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/rccgtphmedia" target="_blank">
+                            <i class="fa-brands fa-youtube" style="color: var(--youtube-color);"></i>
+                            <span>rccgtphmedia</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 RCCG The Potter's House. Designed By Pius. | Moulding Agents of Change
+        &copy; 2026 RCCG The Potter's House. All Rights Reserved. | Designed by Pius.
     </footer>
 
-    <!-- Countdown Script -->
     <script>
         const launchDate = new Date("July 1, 2026 00:00:00").getTime();
 
@@ -297,7 +436,7 @@
 
             if (difference < 0) {
                 clearInterval(countdownFunc);
-                document.querySelector(".countdown-container").innerHTML = "<p style='font-size: 1.5rem; color: var(--accent-color);'>Welcome Home! We are launching today.</p>";
+                document.querySelector(".countdown-section").innerHTML = "<p style='font-size: 1.5rem; color: var(--primary-color); font-weight:600; text-align:center;'>Welcome Home! Our online sanctuary is live.</p>";
             }
         }, 1000);
     </script>
