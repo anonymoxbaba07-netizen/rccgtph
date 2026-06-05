@@ -5,9 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Potter's House - Coming Soon</title>
     
-    <!-- SEO Meta Tags to help ranking -->
-    <meta name="description" content="RCCG The Potter's House, Gbagada. Join our Sunday services from 8:00 AM - 11:00 AM and Wednesday Rhema Cafe at 6:30 PM. Moulding Agents of Change. Our official website is coming soon.">
+    <!-- ── Core Meta Tags ── -->
+    <meta name="description" content="RCCG The Potter's House (rccgtph), Gbagada, Lagos. Sunday Service 8–11 AM · Wednesday Rhema Cafe 6:30 PM. Moulding Agents of Change. Official website coming soon at rccgtph.com.">
+    <meta name="keywords" content="RCCG The Potter's House, rccgtph, rccgtphmedia, tphmedia, TPH Media, The Potter's House Gbagada, The Potter's House Lagos, The Potter's House website, rccgtph.com, RCCG Gbagada, church Gbagada, Sunday service Lagos, Rhema Cafe, Redeemed Christian Church of God">
     <meta name="robots" content="index, follow">
+    <meta name="author" content="RCCG The Potter's House">
+    <meta name="theme-color" content="#0d3b2a">
+
+    <!-- ── Canonical URL ── -->
+    <link rel="canonical" href="https://rccgtph.com/">
+
+    <!-- ── Open Graph (Facebook, WhatsApp, LinkedIn previews) ── -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rccgtph.com/">
+    <meta property="og:title" content="RCCG The Potter's House – Coming Soon | rccgtph">
+    <meta property="og:description" content="The official website of RCCG The Potter's House, Gbagada (rccgtph) is launching soon. Sunday Service 8–11 AM · Wednesday Rhema Cafe 6:30 PM. Moulding Agents of Change.">
+    <meta property="og:image" content="https://www.rccgtph.com/Asset/Images/bg-hero.jpg">
+    <meta property="og:site_name" content="RCCG The Potter's House">
+    <meta property="og:locale" content="en_NG">
+
+    <!-- ── Twitter / X Card ── -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RCCG The Potter's House – Coming Soon | rccgtph">
+    <meta name="twitter:description" content="The official website of RCCG The Potter's House, Gbagada (rccgtph). New site launching soon.">
+    <meta name="twitter:image" content="https://www.rccgtph.com/Asset/Images/bg-hero.jpg">
     
     <!-- Google Fonts for elegant typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -288,40 +309,345 @@
         }
     </style>
 
-    <!-- JSON-LD Structured Data Schema for Local Church SEO -->
+    <!-- ═══════════════════════════════════════════════════════════
+         SCHEMA 1: PlaceOfWorship + LocalBusiness (Primary Entity)
+         
+         Targets: "The Potter's House Gbagada", "RCCG Gbagada", "church near me"
+    ═══════════════════════════════════════════════════════════ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "PlaceOfWorship",
+      "@type": ["PlaceOfWorship", "LocalBusiness"],
+      "@id": "https://rccgtph.com/#church",
       "name": "RCCG The Potter's House",
-      "description": "A parish of the Redeemed Christian Church of God (RCCG) - Moulding Agents of Change.",
+      "alternateName": [
+        "The Potter's House",
+        "The Potter's House Gbagada",
+        "RCCG The Potter's House Gbagada",
+        "rccgtph",
+        "TPH Gbagada",
+        "Redeemed Christian Church of God The Potter's House",
+        "The Potter's House Lagos",
+        "The Potter's House website",
+        "rccgtph.com"
+      ],
+      "description": "RCCG The Potter's House is a parish of the Redeemed Christian Church of God located in Gbagada, Lagos. Our mission is Moulding Agents of Change through Sunday services (8:00 AM – 11:00 AM) and Wednesday Rhema Cafe (6:30 PM – 8:00 PM).",
+      "slogan": "Moulding Agents of Change",
       "url": "https://rccgtph.com",
-      "logo": "https://www.rccgtph.com/Asset/Images/logo.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rccgtph.com/Asset/Images/logo.png",
+        "caption": "RCCG The Potter's House Logo"
+      },
+      "image": "https://www.rccgtph.com/Asset/Images/bg-hero.jpg",
+      "telephone": "",
+      "email": "",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "3 Towobola Street, Behind Mobil Filling Station",
         "addressLocality": "Gbagada",
         "addressRegion": "Lagos",
+        "postalCode": "100234",
         "addressCountry": "NG"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "6.5617",
+        "longitude": "3.3832"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Gbagada"
+        },
+        {
+          "@type": "City",
+          "name": "Lagos"
+        }
+      ],
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Sunday",
           "opens": "08:00",
-          "closes": "11:00"
+          "closes": "11:00",
+          "name": "Sunday Service"
         },
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Wednesday",
           "opens": "18:30",
-          "closes": "20:00"
+          "closes": "20:00",
+          "name": "Wednesday Rhema Cafe"
         }
       ],
+      "keywords": "RCCG, The Potter's House, Gbagada church, rccgtph, tphmedia, rccgtphmedia, Redeemed Christian Church of God, Lagos church, Sunday service Gbagada, Wednesday Rhema Cafe, RCCG Gbagada, church Lagos",
+      "knowsAbout": [
+        "Christian worship",
+        "Sunday services",
+        "Bible study",
+        "Community outreach",
+        "Youth ministry",
+        "Prayer meetings"
+      ],
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Redeemed Christian Church of God",
+        "alternateName": "RCCG",
+        "url": "https://rccg.org"
+      },
+      "sameAs": [
+        "https://www.facebook.com/rccgtph",
+        "https://www.instagram.com/rccgtph",
+        "https://www.youtube.com/rccgtphmedia",
+        "https://facebook.com/rccgtph",
+        "https://instagram.com/rccgtph",
+        "https://youtube.com/rccgtphmedia"
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SCHEMA 2: Organization (Brand Entity)
+        
+         Targets: "rccgtphmedia", "tphmedia", "rccgtph"
+    ═══════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://rccgtph.com/#organization",
+      "name": "RCCG The Potter's House",
+      "alternateName": [
+        "rccgtph",
+        "rccgtphmedia",
+        "tphmedia",
+        "TPH Media",
+        "The Potter's House Media",
+        "The Potter's House Gbagada"
+      ],
+      "url": "https://rccgtph.com",
+      "logo": "https://www.rccgtph.com/Asset/Images/logo.png",
+      "description": "Official digital presence of RCCG The Potter's House, Gbagada, Lagos. Follow us across all platforms as rccgtph and rccgtphmedia.",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Gbagada, Lagos, Nigeria"
+      },
       "sameAs": [
         "https://www.facebook.com/rccgtph",
         "https://www.instagram.com/rccgtph",
         "https://www.youtube.com/rccgtphmedia"
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SCHEMA 3: WebSite + SearchAction
+         
+         named entity. Targets: "rccgtph.com", "The Potter's House website"
+    ═══════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://rccgtph.com/#website",
+      "name": "RCCG The Potter's House",
+      "alternateName": [
+        "rccgtph.com",
+        "The Potter's House website",
+        "The Potter's House official website",
+        "RCCG TPH website"
+      ],
+      "url": "https://rccgtph.com",
+      "description": "The official website of RCCG The Potter's House, Gbagada, Lagos – coming soon.",
+      "publisher": {
+        "@id": "https://rccgtph.com/#organization"
+      },
+      "inLanguage": "en-NG",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://rccgtph.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SCHEMA 4: Recurring Events
+         
+         Targets: "RCCG Gbagada Sunday service", "Rhema Cafe"
+    ═══════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Sunday Service – RCCG The Potter's House",
+      "description": "Join us every Sunday for a life-transforming service at RCCG The Potter's House, Gbagada. Service runs from 8:00 AM to 11:00 AM.",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "startDate": "2026-06-08T08:00:00+01:00",
+      "endDate": "2026-06-08T11:00:00+01:00",
+      "location": {
+        "@type": "Place",
+        "name": "RCCG The Potter's House",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3 Towobola Street, Behind Mobil Filling Station",
+          "addressLocality": "Gbagada",
+          "addressRegion": "Lagos",
+          "addressCountry": "NG"
+        }
+      },
+      "organizer": {
+        "@id": "https://rccgtph.com/#church"
+      },
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": "https://schema.org/Sunday",
+        "startTime": "08:00",
+        "endTime": "11:00"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Wednesday Rhema Cafe – RCCG The Potter's House",
+      "description": "Midweek Bible study and fellowship every Wednesday at RCCG The Potter's House, Gbagada. Runs from 6:30 PM to 8:00 PM.",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "startDate": "2026-06-11T18:30:00+01:00",
+      "endDate": "2026-06-11T20:00:00+01:00",
+      "location": {
+        "@type": "Place",
+        "name": "RCCG The Potter's House",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3 Towobola Street, Behind Mobil Filling Station",
+          "addressLocality": "Gbagada",
+          "addressRegion": "Lagos",
+          "addressCountry": "NG"
+        }
+      },
+      "organizer": {
+        "@id": "https://rccgtph.com/#church"
+      },
+      "eventSchedule": {
+        "@type": "Schedule",
+        "repeatFrequency": "P1W",
+        "byDay": "https://schema.org/Wednesday",
+        "startTime": "18:30",
+        "endTime": "20:00"
+      }
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SCHEMA 5: FAQPage
+         
+         "RCCG TPH website", "what time is Sunday service"
+    ═══════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is RCCG The Potter's House?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RCCG The Potter's House (rccgtph) is a parish of the Redeemed Christian Church of God located at 3 Towobola Street, Gbagada, Lagos. Our mission is Moulding Agents of Change."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What time is the Sunday service at The Potter's House Gbagada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sunday Service at RCCG The Potter's House holds every Sunday from 8:00 AM to 11:00 AM at our Gbagada sanctuary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Rhema Cafe at RCCG The Potter's House?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rhema Cafe is the Wednesday midweek service at RCCG The Potter's House, Gbagada. It holds every Wednesday from 6:30 PM to 8:00 PM and combines Bible study with fellowship."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is RCCG The Potter's House located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RCCG The Potter's House is located at 3 Towobola Street, Behind Mobil Filling Station, Gbagada, Lagos, Nigeria."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the website for RCCG The Potter's House?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The official website for RCCG The Potter's House is rccgtph.com. The site is currently being rebuilt and will launch soon."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find RCCG The Potter's House on social media?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Follow RCCG The Potter's House on Facebook, Instagram, and YouTube under the handles @rccgtph (Facebook and Instagram) and @rccgtphmedia (YouTube). The media ministry is also known as tphmedia or TPH Media."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does rccgtph stand for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "rccgtph stands for Redeemed Christian Church of God The Potter's House. It is the official social media handle and brand identity for the church across all platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does rccgtphmedia mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "rccgtphmedia (also known as tphmedia or TPH Media) is the YouTube and media ministry handle of RCCG The Potter's House, Gbagada. It hosts sermon recordings, event coverage, and church media content."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SCHEMA 6: BreadcrumbList
+        
+         Bing, and DuckDuckGo.
+    ═══════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "RCCG The Potter's House",
+          "item": "https://rccgtph.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Coming Soon",
+          "item": "https://rccgtph.com/#coming-soon"
+        }
       ]
     }
     </script>
@@ -337,7 +663,7 @@
         <p class="tagline">Something beautiful is preparing to launch. Our new digital sanctuary is currently under construction to better serve our community.</p>
 
         <div class="countdown-section">
-            <span class="section-label">Our New Website Launches Soon</span>
+            <span class="section-label">Our New Website Launches In</span>
             <div class="countdown-container">
                 <div class="time-box">
                     <span class="time-num" id="days">00</span>
